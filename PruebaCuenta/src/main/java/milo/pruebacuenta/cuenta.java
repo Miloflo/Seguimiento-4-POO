@@ -10,15 +10,13 @@ package milo.pruebacuenta;
  */
 public class cuenta {
     protected float saldo; 
-/* Atributo que define el número de consignaciones realizadas en 
-una cuenta bancaria */
+
 protected int numeroConsignaciones = 0;
-// Atributo que define el número de retiros de una cuenta bancaria
+
 protected int numeroRetiros = 0;
-// Atributo que define la tasa anual de intereses de una cuenta bancaria
+
 protected float tasaAnual;
-/* Atributo que define la comisión mensual que se cobra a una 
-cuenta bancaria */
+
 protected float comisionMensual = 0;
 
 public cuenta(float saldo, float tasaAnual) {
@@ -41,21 +39,13 @@ numeroRetiros = numeroRetiros + 1;
 System.out.println("La cantida a retirar excede el saldo actual.");
 }
 }
-/**
-* Método que calcula interés mensual de la cuenta a partir de la tasa 
-* anual aplicada
-*/
+
 public void calcularInterés() {
-float tasaMensual = tasaAnual / 12; /* Convierte la tasa anual en 
-mensual */
+float tasaMensual = tasaAnual / 12; 
 float interesMensual = saldo * tasaMensual;
-saldo += interesMensual; /* Actualiza el saldo aplicando el interés 
-mensual */
+saldo += interesMensual; 
 }
-/**
-* Método que genera un extracto aplicando al saldo actual una 
-* comisión y calculando sus intereses
-*/
+
 public void extractoMensual() {
 saldo -= comisionMensual;
 calcularInterés();

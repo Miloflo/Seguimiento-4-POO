@@ -30,14 +30,11 @@ public class CuentaAhorros extends cuenta{
         }
     }
     public void extractoMensual() {
-/* Si la cantidad de retiros es superior a cuatro, se genera una 
-comisión mensual */
+
 if (numeroRetiros > 4) {
 comisionMensual += (numeroRetiros - 4) * 1000;
 }
-super.extractoMensual(); // Invoca al método de la clase padre
-/* Si el saldo actualizado de la cuenta es menor a 10000, la 
-cuenta no se activa */
+super.extractoMensual(); 
 if ( saldo < 10000 ){
     activa = false;
 }
