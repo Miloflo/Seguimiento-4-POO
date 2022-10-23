@@ -16,7 +16,7 @@ public class CuentaAhorros extends cuenta{
         if (saldo<10000){
             activa=false;
         }else{
-            activa=false;
+            activa=true;
         }
     }
     public void retirar(float cantidad) {
